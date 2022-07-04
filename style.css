@@ -16,7 +16,7 @@ body {
 
 .password-container {
   width: 100%;
-  max-width: 28em;
+  max-width: 30em;
   padding: 1.5em;
   background-color: pink;
   border-radius: 0.3em;
@@ -103,4 +103,25 @@ body {
 
 .active.alert-container{
   right: -120%;
+}
+
+@media screen and (max-width:500px) {
+  .password-container {
+  padding: 1em;
+}
+
+.password-container h2{
+  font-size: 1.3rem;
+}
+
+.input-container {
+  border: 2px black solid;
+  width: 100%;
+  max-width: 28em;
+  padding: 0.5em;
+  border-radius: 0.4em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 }
