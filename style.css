@@ -55,6 +55,7 @@ body {
   cursor: pointer;
   opacity: 0.3;
   transition: all 0.3s ease-in-out;
+  font-size: 1.5rem;
 }
 .fa-copy:hover{
   opacity: 0.7;
@@ -105,7 +106,7 @@ body {
   right: -120%;
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:390px) {
   .password-container {
   padding: 1em;
 }
@@ -114,14 +115,7 @@ body {
   font-size: 1.3rem;
 }
 
-.input-container {
-  border: 2px black solid;
-  width: 100%;
-  max-width: 28em;
-  padding: 0.5em;
-  border-radius: 0.4em;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.fa-copy{ 
+  transform: translateX(-150%);
 }
 }
