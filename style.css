@@ -1,0 +1,106 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  font-family: "Courier New", Courier, monospace;
+  padding: 0 0.8em;
+}
+
+.password-container {
+  width: 100%;
+  max-width: 28em;
+  padding: 1.5em;
+  background-color: pink;
+  border-radius: 0.3em;
+  box-shadow: 0 0.3em 0.5em rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.input-container {
+  border: 2px black solid;
+  width: 100%;
+  max-width: 28em;
+  padding: 0.5em;
+  border-radius: 0.4em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input{
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-size: 1.3em;
+  letter-spacing: 0.2em;
+}
+
+.input::placeholder{
+  letter-spacing: 0;
+}
+
+.fa-copy{
+  cursor: pointer;
+  opacity: 0.3;
+  transition: all 0.3s ease-in-out;
+}
+.fa-copy:hover{
+  opacity: 0.7;
+}
+
+.btn{
+  background-color: black;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 1em;
+  padding: 0.3em 1em;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  box-shadow: 0 0.3em 0.5em rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover{
+  background-color: green;
+  transform: translateY(15%);
+}
+
+.btn:active{
+  transform: scale(0.95);
+}
+
+.alert-container{
+  position: fixed;
+  bottom: 5%;
+  right: 3%;
+  width: 15em;
+  height: 2em;
+  background-color: lightgreen;
+  border-radius: 0.3em;
+  box-shadow: 0 0.3em 0.5em rgba(0, 0, 0, 0.3);
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.active.alert-container{
+  right: -120%;
+}
