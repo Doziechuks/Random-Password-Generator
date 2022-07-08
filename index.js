@@ -4,15 +4,15 @@ const btnElement = document.querySelector("#btn");
 const popUpElement = document.querySelector("#altert-container");
 const counterElement = document.querySelector(".counter");
 let counter = 10;
-let count;
+let create = null;
+let count = null;
 
 btnElement.addEventListener("click", () => {
+  clearInterval(create);
+  clearInterval(count);
   createPassword();
   countDown();
-  if(btnElement){
-    counter = 10;
-  }
-  
+  counter = 10;
 });
 
 let createPassword = () => {
@@ -26,12 +26,11 @@ let createPassword = () => {
   }
   inputElement.value = passwordDefault;
   // popUpElement.innerText = passwordDefault + ' Copied!';
-  count = setInterval(createPassword, 10000);
+  create = setInterval(createPassword, 10000);
 };
 
-
 function countDown() {
-   count = setInterval(timer, 1000);
+ count = setInterval(timer, 1000);
   function timer() {
     counter = counter - 1;
     counterElement.innerText = counter;
