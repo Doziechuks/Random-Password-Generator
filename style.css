@@ -41,6 +41,8 @@ body {
 
 .input{
   border: none;
+  width: 100%;
+  max-width: 10em;
   background-color: transparent;
   outline: none;
   font-size: 1.3em;
@@ -59,6 +61,13 @@ body {
 }
 .fa-copy:hover{
   opacity: 0.7;
+}
+
+.btn-container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .btn{
@@ -84,6 +93,10 @@ body {
   transform: scale(0.95);
 }
 
+.counter{
+  font-size: 1.5rem;
+}
+
 .alert-container{
   position: fixed;
   bottom: 5%;
@@ -106,16 +119,3 @@ body {
   right: -120%;
 }
 
-@media screen and (max-width:390px) {
-  .password-container {
-  padding: 1em;
-}
-
-.password-container h2{
-  font-size: 1.3rem;
-}
-
-.fa-copy{ 
-  transform: translateX(-150%);
-}
-}
