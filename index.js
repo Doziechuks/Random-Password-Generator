@@ -8,31 +8,30 @@ let create = null;
 let count = null;
 
 btnElement.addEventListener("click", () => {
+   counter = 10;
   clearInterval(create);
   clearInterval(count);
-  createPassword();
   countDown();
-  counter = 10;
+  createPassword();
 });
 
 let createPassword = () => {
   const randomCharacters =
-    "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ[]!@#%_-()%$&+;:?/|";
-  const passwordLength = 10;
+    "abcdefghijklm1234567890";
+  const passwordLength = 7;
   let passwordDefault = "";
-  for (i = 0; i < passwordLength; i++) {
+  for (let i = 0; i < passwordLength; i++) {
     const randomNum = Math.floor(Math.random() * randomCharacters.length);
     passwordDefault += randomCharacters.substring(randomNum, randomNum + 1);
   }
   inputElement.value = passwordDefault;
-  // popUpElement.innerText = passwordDefault + ' Copied!';
   create = setInterval(createPassword, 10000);
 };
 
 function countDown() {
  count = setInterval(timer, 1000);
   function timer() {
-    counter = counter - 1;
+    counter--;
     counterElement.innerText = counter;
     if (counter === 0) {
       counter = 10;
@@ -55,3 +54,5 @@ let copyPassword = () => {
     }, 2000);
   }
 };
+
+
